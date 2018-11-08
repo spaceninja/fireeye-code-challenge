@@ -1,3 +1,14 @@
+# FireEye Front-End Code Challenge
+
+* Build a small JS app using the attached mockup
+* Tweet data should be loaded dynamically from a json file
+* You _can_ use _any_ JS framework of your choice or no framework at all
+* You should _NOT_ use any CSS frameworks or any existing CSS code
+* You can use a third party icon library and any public images you want
+* Feel free to add any functionality, details, etc that will help show your skills
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

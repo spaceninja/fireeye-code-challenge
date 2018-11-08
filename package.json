@@ -2,12 +2,21 @@
   "name": "fireeye-code-challenge",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://spaceninja.github.io/fireeye-code-challenge/",
   "dependencies": {
+    "gh-pages": "^2.0.1",
+    "node-sass": "^4.10.0",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
     "react-scripts": "2.1.1"
   },
+  "devDependencies": {
+    "stylelint": "^9.7.1",
+    "stylelint-config-spaceninja": "^4.0.0"
+  },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -15,6 +24,9 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-spaceninja"
   },
   "browserslist": [
     ">0.2%",
