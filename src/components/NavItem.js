@@ -14,6 +14,7 @@ const Footer = ({ active, icon, iconOnly, onClick, text, className }) => {
         href="#"
         onClick={onClick}
         type="button"
+        title={text}
       >
         <Icon className="app-header__nav-item-icon" type={icon} />
         <span

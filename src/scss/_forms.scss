@@ -1,0 +1,30 @@
+//
+// Form Styles
+//
+
+input,
+textarea,
+select {
+  font-size: 16px; // prevent iOS from zooming form controls
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn {
+  @include reset_button();
+  background: $color_primary;
+  border-radius: 0.25em;
+  color: white;
+  padding: 0.25em 0.5em;
+
+  &:hover,
+  &:focus {
+    background: $color_primary_dark;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}

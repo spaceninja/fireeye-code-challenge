@@ -1,4 +1,8 @@
 //
+// Utility Helper Classes
+//
+
+//
 // Only display content to screen readers
 //
 // See: https://a11yproject.com/posts/how-to-hide-content/
@@ -20,7 +24,7 @@
 //
 .hide-on-small {
   @media only screen and (max-width: #{$screen_large - 1}) {
-    display: none !important;
+    display: none;
   }
 }
 
@@ -29,6 +33,6 @@
 //
 .hide-on-large {
   @media only screen and (min-width: #{$screen_large}) {
-    display: none !important;
+    display: none;
   }
 }

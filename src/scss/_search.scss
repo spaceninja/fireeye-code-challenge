@@ -1,0 +1,55 @@
+//
+// Search Component
+//
+.search {
+  position: relative;
+  width: 100%;
+}
+
+.search__input {
+  appearance: none;
+  background: $color_primary_dark;
+  border: 0;
+  border-radius: 16px;
+  color: white;
+  display: block;
+  font-weight: 500;
+  height: 32px;
+  padding: 0 1em;
+  width: 100%;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &::placeholder {
+    color: white;
+  }
+
+  &::-webkit-search-cancel-button {
+    appearance: none;
+  }
+}
+
+.search__submit {
+  @include reset_button();
+  display: flex;
+  height: 30px;
+  position: absolute;
+  right: 0.25em;
+  top: 0;
+  width: 32px;
+
+  &:hover,
+  &:focus {
+    color: $color_primary_light;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  > * {
+    margin: auto;
+  }
+}

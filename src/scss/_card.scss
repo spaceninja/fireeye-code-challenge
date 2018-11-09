@@ -6,4 +6,12 @@
   border: 1px solid $color_border_default;
   border-radius: 0.25em;
   padding: $spacing_default * 2;
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
 }

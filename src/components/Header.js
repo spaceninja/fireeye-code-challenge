@@ -4,8 +4,11 @@ import NavItem from "./NavItem";
 import SearchForm from "./SearchForm";
 
 class Header extends React.Component {
+  state = {
+    searchActive: false
+  };
   toggleSearch = () => {
-    console.log("TOGGLE SEARCH");
+    this.setState({ searchActive: !this.state.searchActive });
   };
   render() {
     return (
@@ -26,8 +29,14 @@ class Header extends React.Component {
             <NavItem icon="icon-user" text="Me" />
           </ul>
         </nav>
-        <div className="app-header__util">
-          <SearchForm className="hide-on-small" />
+        <div className="app-header__nav">
+          <div
+            className={`app-header__search ${
+              this.state.searchActive ? "is-active" : ""
+            }`}
+          >
+            <SearchForm onSubmit={this.props.handleSearch} />
+          </div>
           <ul className="app-header__nav-list">
             <NavItem
               icon="icon-search"
