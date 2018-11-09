@@ -1,7 +1,6 @@
 //
 // Form Styles
 //
-
 input,
 textarea,
 select {
@@ -15,7 +14,7 @@ button {
 .btn {
   @include reset_button();
   background: $color_primary;
-  border-radius: 0.25em;
+  border-radius: $border_radius_default;
   color: white;
   padding: 0.25em 0.5em;
 

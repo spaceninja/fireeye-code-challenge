@@ -4,7 +4,7 @@
 .card {
   background: white;
   border: 1px solid $color_border_default;
-  border-radius: 0.25em;
+  border-radius: $border_radius_default;
   padding: $spacing_default * 2;
 
   > :first-child {

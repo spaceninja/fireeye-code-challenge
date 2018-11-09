@@ -25,10 +25,10 @@ $color_primary:       #64b6ee;
 $color_primary_light: #cce6f9;
 
 // background colors
-$color_bg_page: $gray_100;
+$color_bg_page: $gray_050;
 
 // border colors
-$color_border_default: $gray_300;
+$color_border_default: $gray_200;
 
 // text colors
 $color_text_default:    $gray_800;
@@ -52,6 +52,8 @@ $font_size_default: 16px;
 // These are measurements that are used throughout the site and should be
 // consistant, even across components. Things like padding, gutters, etc.
 //
+$height_header:   45px;
+$height_search:   32px;
 $spacing_default: 7px;
 
 //
@@ -63,7 +65,7 @@ $width_main:    590px;
 //
 // Borders
 //
-$border_radius_button: 0.15em;
+$border_radius_default: 0.25em;
 
 //
 // Breakpoints

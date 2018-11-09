@@ -10,11 +10,11 @@
   appearance: none;
   background: $color_primary_dark;
   border: 0;
-  border-radius: 16px;
+  border-radius: $height_search / 2;
   color: white;
   display: block;
   font-weight: 500;
-  height: 32px;
+  height: $height_search;
   padding: 0 1em;
   width: 100%;
 
@@ -34,11 +34,11 @@
 .search__submit {
   @include reset_button();
   display: flex;
-  height: 30px;
+  height: $height_search;
   position: absolute;
   right: 0.25em;
   top: 0;
-  width: 32px;
+  width: $height_search;
 
   &:hover,
   &:focus {

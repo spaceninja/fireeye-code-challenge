@@ -4,9 +4,9 @@
 .app-header {
   align-items: center;
   background: $color_primary;
-  color: white;
+  color: $color_primary_light;
   display: flex;
-  height: 45px;
+  height: $height_header;
   justify-content: space-between;
   padding: 0 $spacing_default;
   position: relative;
@@ -18,20 +18,16 @@
 
 .app-header__logo {
   color: white;
-  display: flex;
-  font-size: 1.5em;
-  height: 45px;
+  font-size: 1.75em;
   left: 50%;
   position: absolute;
   top: 0;
   transform: translateX(-50%);
 
-  > * {
-    margin: auto;
-  }
-
   a {
     color: white;
+    display: flex;
+    height: $height_header;
 
     &:hover,
     &:focus {
@@ -41,22 +37,17 @@
     &:focus {
       outline: 0;
     }
+
+    > * {
+      margin: auto;
+    }
   }
-}
-
-.app-header__nav {
-  display: flex;
-}
-
-.app-header__nav-list {
-  @include reset_list();
-  display: flex;
 }
 
 .app-header__search {
   align-items: center;
   display: flex;
-  height: 45px;
+  height: $height_header;
   padding: 0 $spacing_default * 2;
 
   @media only screen and (max-width: #{$screen_large - 1}) {
@@ -73,6 +64,15 @@
   }
 }
 
+.app-header__nav {
+  display: flex;
+}
+
+.app-header__nav-list {
+  @include reset_list();
+  display: flex;
+}
+
 //
 // Nav Item (button)
 //
@@ -83,7 +83,7 @@
   display: flex;
   font-size: 13px;
   font-weight: 600;
-  height: 45px;
+  height: $height_header;
   padding: 0 $spacing_default;
 
   @media only screen and (min-width: $screen_x_large) {
