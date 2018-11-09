@@ -7,6 +7,12 @@
 * You can use a third party icon library and any public images you want
 * Feel free to add any functionality, details, etc that will help show your skills
 
+## Scott's Notes
+
+* The mockup provided was a low-resolution screenshot, so I replaced the icons in the header bar with open-source SVG icons from FontAwesome. For a real client project, I'd work with the designer to get the proper SVG assets.
+* Again, because the mock was low-resolution, I've replaced the photos (the black and white photo of Arnold and the photo of the Twitter design team) with some stock assets.
+* The twitter user avatars may not match because I'm pulling the live avatars from the site.
+
 ---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

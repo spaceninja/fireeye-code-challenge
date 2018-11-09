@@ -1,0 +1,17 @@
+//
+// Trends Component
+//
+.trend-list__list {
+  @include reset_list();
+}
+
+.trend-list__promoted {
+  margin-left: 0.5em;
+}
+
+.trend-list__promoted-icon {
+  bottom: -0.15em;
+  color: $color_promoted_link;
+  margin-right: 0.25em;
+  position: relative;
+}

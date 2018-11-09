@@ -23,6 +23,7 @@ $gray_900: #212121; // nearly black
 $color_primary_dark:  #4592c6;
 $color_primary:       #64b6ee;
 $color_primary_light: #cce6f9;
+$color_promoted_link: #fed264;
 
 // background colors
 $color_bg_page: $gray_050;
@@ -33,7 +34,7 @@ $color_border_default: $gray_200;
 // text colors
 $color_text_default:    $gray_800;
 $color_text_header:     $gray_600;
-$color_text_link:       $color_primary;
+$color_text_link:       $color_primary_dark;
 $color_text_link_hover: $color_primary;
 $color_text_muted:      $gray_400;
 
@@ -45,7 +46,7 @@ $font_family_system:
   -apple-system, BlinkMacSystemFont, "Segoe UI", roboto, oxygen,
   ubuntu, cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 // stylelint-enable value-keyword-case
-$font_size_default: 16px;
+$font_size_default: 14px;
 
 //
 // Common Measurements
@@ -53,15 +54,18 @@ $font_size_default: 16px;
 // These are measurements that are used throughout the site and should be
 // consistant, even across components. Things like padding, gutters, etc.
 //
-$height_header:   45px;
-$height_search:   32px;
 $spacing_default: 7px;
 
 //
 // Sizes
 //
-$width_sidebar: 290px;
-$width_main:    590px;
+$height_header:       45px;
+$height_search:       32px;
+$size_icon_header_lg: 24px;
+$size_icon_header:    22px;
+$size_icon_header_sm: 20px;
+$width_sidebar:       290px;
+$width_main:          590px;
 
 //
 // Borders

@@ -3,7 +3,7 @@ import sprite from "../assets/sprite.svg";
 
 const Icon = ({ type, className, title }) => (
   <svg className={`icon ${className}`} aria-hidden={title ? "false" : "true"}>
-    {title ? `<title>${title}</title>` : null}
+    {title && `<title>${title}</title>`}
     <use xlinkHref={`${sprite}#${type}`} />
   </svg>
 );

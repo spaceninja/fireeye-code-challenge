@@ -5,11 +5,13 @@ import SearchResults from "./SearchResults";
 import Profile from "./Profile";
 import TrendList from "./TrendList";
 import Footer from "./Footer";
+import trends from "../data/trends";
 
 class App extends React.Component {
   state = {
     searchString: "",
-    showSearchResults: false
+    showSearchResults: false,
+    trends: trends
   };
 
   handleSearch = searchString => {
@@ -24,6 +26,8 @@ class App extends React.Component {
     console.log("OPEN NEW TWEET MODAL");
   };
 
+  componentDidMount() {}
+
   render() {
     return (
       <div className="app">
@@ -35,7 +39,7 @@ class App extends React.Component {
         </header>
         <aside className="app__sidebar">
           <Profile />
-          <TrendList />
+          <TrendList trends={this.state.trends} />
           <Footer />
         </aside>
         <main className="app__main">
