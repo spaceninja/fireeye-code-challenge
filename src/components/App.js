@@ -4,14 +4,17 @@ import TweetList from "./TweetList";
 import Profile from "./Profile";
 import TrendList from "./TrendList";
 import Footer from "./Footer";
-// import logo from "../assets/logo.svg";
 
 class App extends React.Component {
+  openTweetModal = () => {
+    console.log("OPEN NEW TWEET MODAL");
+  };
+
   render() {
     return (
       <div className="app">
         <header className="app__header">
-          <Header />
+          <Header openTweetModal={this.openTweetModal} />
         </header>
         <aside className="app__sidebar">
           <Profile />

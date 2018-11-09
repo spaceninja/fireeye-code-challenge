@@ -1,0 +1,21 @@
+//
+// Default Treatment for an SVG icon
+//
+// see: https://fvsch.com/code/svg-icons/how-to/
+//
+// 1. Lets the icon inherit the text color: https://css-tricks.com/?p=172432
+// 2. Inherit the text size too. Allows sizing the icon with font-size.
+// 3. Nice visual alignment for icons alongside text.
+//
+.icon {
+  color: inherit;           // 1
+  fill: currentColor;       // 1
+  height: 1em;              // 2
+  vertical-align: text-top; // 3
+  width: 1em;               // 2
+
+  &:hover {
+    color: inherit;       // 1
+    fill: currentColor;   // 1
+  }
+}

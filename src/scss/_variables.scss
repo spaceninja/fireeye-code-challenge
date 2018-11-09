@@ -20,7 +20,8 @@ $gray_800: #424242;
 $gray_900: #212121; // nearly black
 
 // Brand Colors
-$color_primary: cornflowerblue;
+$color_primary:       #64b6ee;
+$color_primary_light: #cce6f9;
 
 // background colors
 $color_bg_page: $gray_100;
@@ -29,10 +30,10 @@ $color_bg_page: $gray_100;
 $color_border_default: $gray_300;
 
 // text colors
-$color_text_default:                   $gray_800;
-$color_text_link:                      $color_primary;
-$color_text_link_hover:                $color_primary;
-$color_text_muted:                     $gray_600;
+$color_text_default:    $gray_800;
+$color_text_link:       $color_primary;
+$color_text_link_hover: $color_primary;
+$color_text_muted:      $gray_600;
 
 //
 // Typography
@@ -50,7 +51,7 @@ $font_size_default: 16px;
 // These are measurements that are used throughout the site and should be
 // consistant, even across components. Things like padding, gutters, etc.
 //
-$spacing_default:      7px;
+$spacing_default: 7px;
 
 //
 // Sizes
@@ -62,9 +63,6 @@ $width_main:    590px;
 // Borders
 //
 $border_radius_button: 0.15em;
-$border_width_button:  0.07em; // roughly 1 px at default body size
-$border_width_toggle:  3px;
-$border_width_image_link: 4px;
 
 //
 // Breakpoints

@@ -3,8 +3,19 @@
 //
 // Common code snippet to tell a list not to look like a list.
 //
-@mixin clear_list() {
+@mixin reset_list() {
   list-style: none;
   margin: 0;
+  padding: 0;
+}
+
+//
+// Clear Button Styling
+//
+@mixin reset_button() {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
   padding: 0;
 }
