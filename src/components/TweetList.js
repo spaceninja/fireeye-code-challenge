@@ -4,7 +4,12 @@ class TweetList extends React.Component {
   render() {
     return (
       <div className="card">
-        <p>TweetList</p>
+        <header className="card__title">
+          <h2>Tweets</h2>
+        </header>
+        <div className="card__body">
+          <p>TweetList</p>
+        </div>
       </div>
     );
   }

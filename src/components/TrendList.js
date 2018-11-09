@@ -4,7 +4,9 @@ class TrendList extends React.Component {
   render() {
     return (
       <div className="card">
-        <p>TrendList</p>
+        <div className="card__body">
+          <p>TrendList</p>
+        </div>
       </div>
     );
   }

@@ -5,8 +5,12 @@ class Profile extends React.Component {
   render() {
     return (
       <div className="card">
-        <p>Profile</p>
-        <TweetComposer />
+        <div className="card__body">
+          <p>Profile</p>
+        </div>
+        <footer className="card__footer">
+          <TweetComposer />
+        </footer>
       </div>
     );
   }

@@ -1,0 +1,25 @@
+//
+// App Footer Component
+//
+.app-footer {
+  color: $color_text_muted;
+  font-size: 12px;
+
+  a {
+    color: $color_text_muted;
+
+    &:hover,
+    &:focus {
+      color: $color_text_link;
+    }
+  }
+}
+
+.app-footer__list {
+  @include reset_list();
+}
+
+.app-footer__item {
+  display: inline-block;
+  margin-right: 1em;
+}

@@ -32,9 +32,10 @@ $color_border_default: $gray_200;
 
 // text colors
 $color_text_default:    $gray_800;
+$color_text_header:     $gray_600;
 $color_text_link:       $color_primary;
 $color_text_link_hover: $color_primary;
-$color_text_muted:      $gray_600;
+$color_text_muted:      $gray_400;
 
 //
 // Typography
@@ -65,7 +66,7 @@ $width_main:    590px;
 //
 // Borders
 //
-$border_radius_default: 0.25em;
+$border_radius_default: 0.33rem;
 
 //
 // Breakpoints

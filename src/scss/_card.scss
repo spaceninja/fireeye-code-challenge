@@ -5,6 +5,18 @@
   background: white;
   border: 1px solid $color_border_default;
   border-radius: $border_radius_default;
+}
+
+.card__title {
+  border-bottom: 1px solid $color_border_default;
+  padding: $spacing_default * 2;
+
+  > * {
+    margin: 0;
+  }
+}
+
+.card__body {
   padding: $spacing_default * 2;
 
   > :first-child {
@@ -13,5 +25,14 @@
 
   > :last-child {
     margin-bottom: 0;
+  }
+}
+
+.card__footer {
+  border-top: 1px solid $color_border_default;
+  padding: $spacing_default * 2;
+
+  > * {
+    margin: 0;
   }
 }
