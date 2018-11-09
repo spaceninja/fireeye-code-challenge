@@ -1,0 +1,74 @@
+//
+// Page Layout
+//
+body {
+  min-height: 100vh;
+}
+
+.app {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @supports (display: grid) {
+    display: grid;
+    grid-gap: $spacing_default * 2;
+    grid-template-areas:
+      "head head head"
+      ".    main .   ";
+    grid-template-columns: 0 1fr 0;
+
+    @media only screen and (min-width: $screen_large) {
+      grid-template-areas:
+        "head head head head"
+        ".    side main .   ";
+      grid-template-columns: 1fr $width_sidebar minmax(min-content, $width_main) 1fr;
+    }
+  }
+}
+
+.app__header {
+  width: 100vw;
+
+  @supports (display: grid) {
+    grid-area: head;
+    width: auto;
+  }
+}
+
+.app__sidebar {
+  display: none;
+  margin: $spacing_default * 2;
+  width: $width_sidebar;
+
+  > * + * {
+    margin-top: $spacing_default * 2;
+  }
+
+  @supports (display: grid) {
+    grid-area: side;
+    margin: 0;
+    width: auto;
+  }
+
+  @media only screen and (min-width: $screen_large) {
+    display: block;
+  }
+}
+
+.app__main {
+  flex: 1;
+  margin: $spacing_default * 2;
+  max-width: $width_main;
+
+  @supports (display: grid) {
+    grid-area: main;
+    margin: 0;
+    max-width: none;
+  }
+
+  @media only screen and (min-width: $screen_large) {
+    margin-left: 0;
+  }
+}

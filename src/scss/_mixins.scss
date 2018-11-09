@@ -1,0 +1,10 @@
+//
+// Clear List Styling
+//
+// Common code snippet to tell a list not to look like a list.
+//
+@mixin clear_list() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,9 @@
+//
+// Card Component
+//
+.card {
+  background: white;
+  border: 1px solid $color_border_default;
+  border-radius: 0.25em;
+  padding: $spacing_default * 2;
+}

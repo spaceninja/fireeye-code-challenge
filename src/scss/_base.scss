@@ -1,0 +1,28 @@
+//
+// Color & Typography
+//
+html {
+  font-family: $font_family_system;
+  font-size: $font_size_default;
+}
+
+body {
+  background: $color_bg_page;
+  color: $color_text_default;
+  margin: 0;
+  padding: 0;
+}
+
+//
+// Links
+//
+a {
+  color: $color_text_link;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $color_text_link_hover;
+    text-decoration: underline;
+  }
+}

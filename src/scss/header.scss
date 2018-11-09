@@ -1,0 +1,51 @@
+//
+// Header
+//
+.app-header {
+  align-items: center;
+  background: $color_primary;
+  color: white;
+  display: flex;
+  height: 45px;
+  justify-content: space-between;
+
+  > * {
+    margin: 0;
+  }
+
+  a {
+    color: white;
+
+    &:hover,
+    &:focus {
+      color: white;
+    }
+  }
+}
+
+.app-header__logo {
+  left: 50%;
+  position: absolute;
+  top: 0;
+}
+
+.app-header__nav {
+  display: flex;
+}
+
+.app-header__nav-list {
+  @include clear_list();
+  display: flex;
+}
+
+.app-header__nav-item {
+  align-items: center;
+  display: flex;
+  height: 45px;
+  outline: 1px solid hotpink;
+  padding: 0 $spacing_default;
+}
+
+.app-header__util {
+  display: flex;
+}
