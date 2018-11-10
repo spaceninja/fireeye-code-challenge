@@ -1,0 +1,61 @@
+//
+// Profile Component
+//
+.profile__avatar {
+  background: white;
+  border: $border_width_avatar solid white;
+  border-radius: $border_radius_default;
+  left: $width_sidebar / 2 - $size_avatar / 2 - $border_width_avatar;
+  overflow: hidden;
+  position: absolute;
+  top: $height_profile_hero / 2 - $size_avatar / 2 - $border_width_avatar;
+}
+
+.profile__avatar-media {
+  border-radius: $border_radius_default / 2;
+  display: block;
+}
+
+.profile__stat-list {
+  @include reset_list();
+  display: flex;
+}
+
+.profile__stat {
+  flex: 1;
+  line-height: 1;
+  padding: $spacing_default * 2;
+
+  + .profile__stat {
+    border-left: 1px solid $color_border_default;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.profile__stat-label {
+  color: $color_text_muted;
+  display: block;
+  font-size: 0.714em;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+
+  :hover > &,
+  :focus > & {
+    color: $color_text_header;
+  }
+}
+
+.profile__stat-number {
+  color: $color_text_header;
+  display: block;
+  font-weight: 600;
+}

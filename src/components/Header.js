@@ -7,19 +7,20 @@ class Header extends React.Component {
   state = {
     searchActive: false
   };
+
   toggleSearch = () => {
     this.setState({ searchActive: !this.state.searchActive });
   };
+
   render() {
     return (
       <div className="app-header">
+        {/* eslint-disable jsx-a11y/anchor-is-valid */}
         <h1 className="app-header__logo">
-          {/* eslint-disable jsx-a11y/anchor-is-valid */}
           <a href="#">
             <Icon type="icon-twitter" />
             <span className="sr-only">Twitter</span>
           </a>
-          {/* eslint-enable jsx-a11y/anchor-is-valid */}
         </h1>
         <nav className="app-header__nav">
           <ul className="app-header__nav-list">

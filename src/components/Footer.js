@@ -3,9 +3,9 @@ import React from "react";
 const Footer = props => {
   return (
     <footer className="app-footer card">
+      {/* eslint-disable jsx-a11y/anchor-is-valid */}
       <div className="card__body">
         <ul className="app-footer__list">
-          {/* eslint-disable jsx-a11y/anchor-is-valid */}
           <li className="app-footer__item">© 2014 Twitter</li>
           <li className="app-footer__item">
             <a href="#">About</a>
@@ -49,7 +49,6 @@ const Footer = props => {
           <li className="app-footer__item">
             <a href="#">Developers</a>
           </li>
-          {/* eslint-enable jsx-a11y/anchor-is-valid */}
         </ul>
       </div>
     </footer>

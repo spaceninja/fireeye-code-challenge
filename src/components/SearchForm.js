@@ -5,14 +5,17 @@ class SearchForm extends React.Component {
   state = {
     searchString: ""
   };
+
   handleChange = e => {
     this.setState({ searchString: e.target.value });
   };
+
   handleSubmit = e => {
     e.preventDefault();
     this.setState({ searchString: "" });
     this.props.onSubmit(this.state.searchString);
   };
+
   render() {
     return (
       <form
