@@ -46,8 +46,11 @@
 }
 
 .card__footer {
+  background: $color_bg_page;
+  border-bottom-left-radius: $border_radius_default;
+  border-bottom-right-radius: $border_radius_default;
   border-top: 1px solid $color_border_default;
-  padding: $spacing_default * 2;
+  padding: $spacing_default * 1.5 $spacing_default * 2;
 
   > * {
     margin: 0;

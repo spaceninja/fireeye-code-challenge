@@ -14,6 +14,11 @@ class App extends React.Component {
     trends: trends
   };
 
+  handleTweet = tweetString => {
+    console.log(tweetString);
+    this.setState({ tweetString });
+  };
+
   handleSearch = searchString => {
     this.setState({ searchString, showSearchResults: true });
   };
@@ -38,7 +43,7 @@ class App extends React.Component {
           />
         </header>
         <aside className="app__sidebar">
-          <Profile />
+          <Profile handleTweet={this.handleTweet} />
           <TrendList trends={this.state.trends} />
           <Footer />
         </aside>

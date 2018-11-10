@@ -1,7 +1,7 @@
 import React from "react";
 import TweetComposer from "./TweetComposer";
 
-const Profile = props => {
+const Profile = ({ handleTweet }) => {
   return (
     <div className="profile card">
       {/* eslint-disable jsx-a11y/anchor-is-valid */}
@@ -50,7 +50,7 @@ const Profile = props => {
         </ul>
       </div>
       <footer className="card__footer">
-        <TweetComposer />
+        <TweetComposer onSubmit={handleTweet} />
       </footer>
     </div>
   );
