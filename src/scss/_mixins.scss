@@ -3,9 +3,7 @@
 //
 
 //
-// Clear List Styling
-//
-// Common code snippet to tell a list not to look like a list.
+// Clear Native List Styling
 //
 @mixin reset_list() {
   list-style: none;
@@ -14,7 +12,7 @@
 }
 
 //
-// Clear Button Styling
+// Clear Native Button Styling
 //
 @mixin reset_button() {
   background: none;

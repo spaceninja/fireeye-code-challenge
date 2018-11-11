@@ -5,10 +5,10 @@
   background: white;
   border: $border_width_avatar solid white;
   border-radius: $border_radius_default;
-  left: $width_sidebar / 2 - $size_avatar / 2 - $border_width_avatar;
+  left: $width_sidebar / 2 - $size_profile_avatar / 2 - $border_width_avatar;
   overflow: hidden;
   position: absolute;
-  top: $height_profile_hero / 2 - $size_avatar / 2 - $border_width_avatar;
+  top: $height_profile_hero / 2 - $size_profile_avatar / 2 - $border_width_avatar;
 }
 
 .profile__avatar-media {

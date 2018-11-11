@@ -3,6 +3,9 @@
 //
 .tweet {
   padding: $spacing_default * 2;
+  padding-bottom: $spacing_default;
+  padding-left: $size_tweet_avatar + $spacing_default * 4;
+  position: relative;
 
   + .tweet {
     border-top: 1px solid $color_border_light;
@@ -18,10 +21,54 @@
   }
 }
 
+.tweet__avatar {
+  left: $spacing_default * 2;
+  position: absolute;
+  top: $spacing_default * 2;
+}
+
+.tweet__avatar-media {
+  border-radius: $border_radius_default;
+}
+
+.tweet__header {
+  display: flex;
+  justify-content: space-between;
+  line-height: 1;
+  margin-bottom: 0.15em;
+}
+
+.tweet__text {
+  line-height: 1.3;
+  margin: 0;
+}
+
 .tweet__actions {
   display: flex;
+  left: -0.5em; // align button contents with text
+  position: relative;
 
   > * + * {
     margin-left: 0.5em;
   }
+}
+
+.tweet--retweet {
+  background: #ffeeee;
+}
+
+.tweet--thread {
+  border-left: 4px solid pink;
+
+  &.is-collapsed {
+    background: pink;
+  }
+}
+
+.tweet--thread-start {
+  border-top: 4px solid pink;
+}
+
+.tweet--thread-end {
+  border-bottom: 4px solid pink;
 }
