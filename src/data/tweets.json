@@ -142,14 +142,15 @@
     "retweeted": true
   },
   {
-    "created_at": "2014-01-17T02:25:00.000Z",
-    "id": 424019680722833409,
-    "text": "Thanks to <a href=\"#\">@olivegarden</a> for the emergency bread sticks delivery!",
+    "created_at": "2014-01-17T02:27:00.000Z",
+    "id": 424004994841325568,
+    "text": "Thanks to <a href=\"#\">@olivegarden</a> for the emergency bread sticks delivery! <a href=\"#\">pic.twitter.com/0mYIFpVWWb</a>",
+    "photo": "https://pbs.twimg.com/media/BeJeS8WCcAECZ8i.png",
     "user": {
       "name": "Twitter Design",
       "screen_name": "design",
       "avatar": "453289910363906048/mybOhh4Z",
-      "avatar_format": "jpg"
+      "avatar_format": "jpeg"
     },
     "thread": {
       "id": 424019680722833409,
@@ -164,9 +165,9 @@
     "retweeted": false
   },
   {
-    "created_at": "2014-01-17T03:25:00.000Z",
-    "id": 1046078918510497792,
-    "text": "The best break for a busy day involves multiple bites of breadsticks.",
+    "created_at": "2014-01-17T02:37:00.000Z",
+    "id": 515930871355170816,
+    "text": "<a href=\"#\">@design</a> This brings back good memories! Would you mind if we share this photo with our social communities?",
     "user": {
       "name": "Olive Garden",
       "screen_name": "olivegarden",
@@ -181,7 +182,7 @@
     },
     "retweeted_by": null,
     "retweets": 0,
-    "favorites": 0,
+    "favorites": 1,
     "favorited": false,
     "retweeted": false
   }

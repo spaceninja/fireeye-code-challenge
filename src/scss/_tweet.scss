@@ -7,4 +7,13 @@
   + .tweet {
     border-top: 1px solid $color_border_light;
   }
+
+  figure {
+    margin: 0;
+
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+  }
 }
