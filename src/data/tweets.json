@@ -1,0 +1,179 @@
+[
+  {
+    "created_at": "2014-01-17T00:58:00.000Z",
+    "id": 123412341234,
+    "text": "<a href=\"#\">@make_believing</a> <a href=\"#\">@Roach</a> Ollie *is* the twitterific bird. Remember twitteriffic? It was actually the first twitter client to use a bird logo",
+    "user": {
+      "name": "Patrick Ewing",
+      "screen_name": "hoverbird",
+      "profile_image": "453590893774118912/E00Ns3Dq"
+    },
+    "thread": {
+      "id": 423982655701385216,
+      "collapsed": false,
+      "start": true,
+      "end": false
+    },
+    "retweeted_by": null,
+    "retweets": 0,
+    "favorites": 1,
+    "favorited": false,
+    "retweeted": false
+  },
+  {
+    "created_at": "2014-01-17T00:59:00.000Z",
+    "id": 423982786781777920,
+    "text": "<a href=\"#\">@make_believing</a> <a href=\"#\">@Roach</a> they once set a whole box of these bird dolls to HQ, we loved em. it was 2009. different times",
+    "user": {
+      "name": "Patrick Ewing",
+      "screen_name": "hoverbird",
+      "profile_image": "453590893774118912/E00Ns3Dq"
+    },
+    "thread": {
+      "id": 423982655701385216,
+      "collapsed": true,
+      "start": false,
+      "end": false
+    },
+    "retweeted_by": null,
+    "retweets": 0,
+    "favorites": 3,
+    "favorited": false,
+    "retweeted": false
+  },
+  {
+    "created_at": "2014-01-17T03:18:00.000Z",
+    "id": 424017952493420545,
+    "text": "<a href=\"#\">@hoverbird</a> <a href=\"#\">@make_believing</a> <a href=\"#\">@roach</a> <a href=\"#\">@elizabeth</a> & i had shared custody of one, they were a total hot commodity",
+    "user": {
+      "name": "Olivia Watkins",
+      "screen_name": "olivia",
+      "profile_image": "628650083316150272/FvsLyojG"
+    },
+    "thread": {
+      "id": 423982655701385216,
+      "collapsed": false,
+      "start": false,
+      "end": false
+    },
+    "retweeted_by": null,
+    "retweets": 1,
+    "favorites": 3,
+    "favorited": false,
+    "retweeted": false
+  },
+  {
+    "created_at": "2014-01-17T03:20:00.000Z",
+    "id": 424018474856218624,
+    "text": "<a href=\"#\">@olivia</a> <a href=\"#\">@hoverbird</a> <a href=\"#\">@make_believing</a> <a href=\"#\">@Roach</a> I bet I have that bird somewhere. :)",
+    "user": {
+      "name": "Elizabeth Weil",
+      "screen_name": "elizabeth",
+      "profile_image": "735110810184253443/r7OVvyVv"
+    },
+    "thread": {
+      "id": 423982655701385216,
+      "collapsed": false,
+      "start": false,
+      "end": true
+    },
+    "retweeted_by": null,
+    "retweets": 0,
+    "favorites": 2,
+    "favorited": false,
+    "retweeted": false
+  },
+  {
+    "created_at": "2014-01-17T03:18:00.000Z",
+    "id": 424017930251411456,
+    "text": "OH: \u201cpull request drunk, merge sober\u201d",
+    "user": {
+      "name": "Lincoln Stoll",
+      "screen_name": "lstoll",
+      "profile_image": "780063492791472128/f23jG-RZ"
+    },
+    "thread": null,
+    "retweeted_by": null,
+    "retweets": 6,
+    "favorites": 9,
+    "favorited": false,
+    "retweeted": false
+  },
+  {
+    "created_at": "2014-01-17T03:06:00.000Z",
+    "id": 424014873136463873,
+    "text": "I keep wanting to call Seattle (my new home) \"Seatown\" but I feel like that's not a thing is that a thing?",
+    "user": {
+      "name": "Julie Ann Horvath",
+      "screen_name": "nrrrdcore",
+      "profile_image": "1058147964550504448/7v2OLkPj"
+    },
+    "thread": null,
+    "retweeted_by": null,
+    "retweets": 1,
+    "favorites": 6,
+    "favorited": false,
+    "retweeted": false
+  },
+  {
+    "created_at": "2014-01-17T02:58:00.000Z",
+    "id": 424012708971675648,
+    "text": "Don't worry be hyphy.",
+    "user": {
+      "name": "Kreayshwn Ferrari",
+      "screen_name": "KREAYSHAWN",
+      "profile_image": "1057106698370838528/-VT450nS"
+    },
+    "thread": null,
+    "retweeted_by": {
+      "name": "Julie Ann Horvath",
+      "screen_name": "nrrrdcore"
+    },
+    "retweets": 439,
+    "favorites": 277,
+    "favorited": true,
+    "retweeted": true
+  },
+  {
+    "created_at": "2014-01-17T02:25:00.000Z",
+    "id": 424019680722833409,
+    "text": "Thanks to <a href=\"#\">@olivegarden</a> for the emergency bread sticks delivery!",
+    "user": {
+      "name": "Twitter Design",
+      "screen_name": "design",
+      "profile_image": "453289910363906048/mybOhh4Z"
+    },
+    "thread": {
+      "id": 424019680722833409,
+      "collapsed": false,
+      "start": true,
+      "end": false
+    },
+    "retweeted_by": null,
+    "retweets": 0,
+    "favorites": 1,
+    "favorited": false,
+    "retweeted": false
+  },
+  {
+    "created_at": "2014-01-17T03:25:00.000Z",
+    "id": 1046078918510497792,
+    "text": "The best break for a busy day involves multiple bites of breadsticks.",
+    "user": {
+      "name": "Olive Garden",
+      "screen_name": "olivegarden",
+      "profile_image": "788366775314423808/8P5Pxd6k"
+    },
+    "thread": {
+      "id": 424019680722833409,
+      "collapsed": false,
+      "start": false,
+      "end": true
+    },
+    "retweeted_by": null,
+    "retweets": 0,
+    "favorites": 0,
+    "favorited": false,
+    "retweeted": false
+  }
+]

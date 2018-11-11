@@ -6,12 +6,14 @@ import Profile from "./Profile";
 import TrendList from "./TrendList";
 import Footer from "./Footer";
 import trends from "../data/trends";
+import jsonTweets from "../data/tweets.json";
 
 class App extends React.Component {
   state = {
     searchString: "",
     showSearchResults: false,
-    trends: trends
+    trends: trends,
+    tweets: []
   };
 
   handleTweet = tweetString => {
@@ -31,7 +33,11 @@ class App extends React.Component {
     console.log("OPEN NEW TWEET MODAL");
   };
 
-  componentDidMount() {}
+  componentDidMount() {
+    // emulate an API call for the tweet json data
+    const tweets = JSON.parse(JSON.stringify(jsonTweets));
+    this.setState({ tweets });
+  }
 
   render() {
     return (
@@ -54,7 +60,7 @@ class App extends React.Component {
               closeSearchResults={this.closeSearchResults}
             />
           ) : (
-            <TweetList />
+            <TweetList tweets={this.state.tweets} />
           )}
         </main>
       </div>
