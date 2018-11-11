@@ -1,5 +1,5 @@
 import React from "react";
-import Icon from "./Icon";
+import Button from "./Button";
 
 class TweetComposer extends React.Component {
   state = {
@@ -32,9 +32,7 @@ class TweetComposer extends React.Component {
           value={this.state.tweet}
           onChange={this.handleChange}
         />
-        <button className="new-tweet__submit">
-          <span>Submit</span>
-        </button>
+        <Button className="new-tweet__submit" text="Submit" type="submit" />
       </form>
     );
   }

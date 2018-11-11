@@ -1,0 +1,10 @@
+//
+// Tweet Component
+//
+.tweet {
+  padding: $spacing_default * 2;
+
+  + .tweet {
+    border-top: 1px solid $color_border_light;
+  }
+}

@@ -8,12 +8,10 @@ class TweetList extends React.Component {
         <header className="card__title">
           <h2>Tweets</h2>
         </header>
-        <div className="card__body">
-          <ul>
-            {this.props.tweets.map(tweet => (
-              <Tweet key={tweet.id} details={tweet} />
-            ))}
-          </ul>
+        <div className="card__body--no-padding">
+          {this.props.tweets.map(tweet => (
+            <Tweet key={tweet.id} details={tweet} />
+          ))}
         </div>
       </div>
     );

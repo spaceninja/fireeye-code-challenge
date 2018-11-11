@@ -6,7 +6,8 @@
     "user": {
       "name": "Patrick Ewing",
       "screen_name": "hoverbird",
-      "profile_image": "453590893774118912/E00Ns3Dq"
+      "avatar": "453590893774118912/E00Ns3Dq",
+      "avatar_format": "png"
     },
     "thread": {
       "id": 423982655701385216,
@@ -27,7 +28,8 @@
     "user": {
       "name": "Patrick Ewing",
       "screen_name": "hoverbird",
-      "profile_image": "453590893774118912/E00Ns3Dq"
+      "avatar": "453590893774118912/E00Ns3Dq",
+      "avatar_format": "png"
     },
     "thread": {
       "id": 423982655701385216,
@@ -48,7 +50,8 @@
     "user": {
       "name": "Olivia Watkins",
       "screen_name": "olivia",
-      "profile_image": "628650083316150272/FvsLyojG"
+      "avatar": "628650083316150272/FvsLyojG",
+      "avatar_format": "jpg"
     },
     "thread": {
       "id": 423982655701385216,
@@ -69,7 +72,8 @@
     "user": {
       "name": "Elizabeth Weil",
       "screen_name": "elizabeth",
-      "profile_image": "735110810184253443/r7OVvyVv"
+      "avatar": "735110810184253443/r7OVvyVv",
+      "avatar_format": "jpg"
     },
     "thread": {
       "id": 423982655701385216,
@@ -90,7 +94,8 @@
     "user": {
       "name": "Lincoln Stoll",
       "screen_name": "lstoll",
-      "profile_image": "780063492791472128/f23jG-RZ"
+      "avatar": "780063492791472128/f23jG-RZ",
+      "avatar_format": "jpg"
     },
     "thread": null,
     "retweeted_by": null,
@@ -106,7 +111,8 @@
     "user": {
       "name": "Julie Ann Horvath",
       "screen_name": "nrrrdcore",
-      "profile_image": "1058147964550504448/7v2OLkPj"
+      "avatar": "1058147964550504448/7v2OLkPj",
+      "avatar_format": "jpg"
     },
     "thread": null,
     "retweeted_by": null,
@@ -122,7 +128,8 @@
     "user": {
       "name": "Kreayshwn Ferrari",
       "screen_name": "KREAYSHAWN",
-      "profile_image": "1057106698370838528/-VT450nS"
+      "avatar": "1057106698370838528/-VT450nS",
+      "avatar_format": "jpg"
     },
     "thread": null,
     "retweeted_by": {
@@ -141,7 +148,8 @@
     "user": {
       "name": "Twitter Design",
       "screen_name": "design",
-      "profile_image": "453289910363906048/mybOhh4Z"
+      "avatar": "453289910363906048/mybOhh4Z",
+      "avatar_format": "jpg"
     },
     "thread": {
       "id": 424019680722833409,
@@ -162,7 +170,8 @@
     "user": {
       "name": "Olive Garden",
       "screen_name": "olivegarden",
-      "profile_image": "788366775314423808/8P5Pxd6k"
+      "avatar": "788366775314423808/8P5Pxd6k",
+      "avatar_format": "jpg"
     },
     "thread": {
       "id": 424019680722833409,

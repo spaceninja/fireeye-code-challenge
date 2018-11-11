@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./Button";
 
 const SearchResults = ({ searchString, closeSearchResults }) => {
   return (
@@ -8,9 +9,7 @@ const SearchResults = ({ searchString, closeSearchResults }) => {
       </header>
       <div className="card__body">
         <p>No results found.</p>
-        <button type="button" className="btn" onClick={closeSearchResults}>
-          Dismiss
-        </button>
+        <Button className="btn" text="Dismiss" onClick={closeSearchResults} />
       </div>
     </div>
   );

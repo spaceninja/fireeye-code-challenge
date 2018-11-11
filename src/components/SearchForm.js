@@ -1,5 +1,5 @@
 import React from "react";
-import Icon from "./Icon";
+import Button from "./Button";
 
 class SearchForm extends React.Component {
   state = {
@@ -33,10 +33,13 @@ class SearchForm extends React.Component {
           value={this.state.searchString}
           onChange={this.handleChange}
         />
-        <button className="search__submit">
-          <Icon type="icon-search" />
-          <span className="sr-only">Submit</span>
-        </button>
+        <Button
+          className="search__submit"
+          text="Submit"
+          icon="icon-search"
+          iconOnly={true}
+          type="submit"
+        />
       </form>
     );
   }

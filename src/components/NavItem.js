@@ -1,5 +1,5 @@
 import React from "react";
-import Icon from "./Icon";
+import Button from "./Button";
 
 const NavItem = ({ active, icon, iconOnly, onClick, text, className }) => {
   return (
@@ -8,19 +8,13 @@ const NavItem = ({ active, icon, iconOnly, onClick, text, className }) => {
         active ? "is-active" : ""
       }`}
     >
-      <button
+      <Button
         className="app-header__nav-item"
         onClick={onClick}
-        type="button"
-        title={text}
-      >
-        <Icon className="app-header__nav-item-icon" type={icon} />
-        <span
-          className={`app-header__nav-item-text ${iconOnly ? "sr-only" : ""}`}
-        >
-          {text}
-        </span>
-      </button>
+        text={text}
+        icon={icon}
+        iconOnly={iconOnly}
+      />
     </li>
   );
 };
