@@ -32,24 +32,24 @@
 }
 
 .search__submit {
-  @include reset_button();
-  display: flex;
+  background: none;
+  font-size: 1em;
   height: $height_search;
+  padding: 0;
   position: absolute;
   right: 0.25em;
   top: 0;
+  transition: color $duration_default $transition_default;
   width: $height_search;
 
   &:hover,
-  &:focus {
+  &:focus,
+  .is-active & {
+    background: none;
     color: $color_primary_light;
   }
 
   &:focus {
-    outline: 0;
-  }
-
-  > * {
-    margin: auto;
+    box-shadow: none;
   }
 }

@@ -9,7 +9,7 @@ const NavItem = ({ active, icon, iconOnly, onClick, text, className }) => {
       }`}
     >
       <Button
-        className="app-header__nav-item"
+        component="app-header__nav-item"
         onClick={onClick}
         text={text}
         icon={icon}

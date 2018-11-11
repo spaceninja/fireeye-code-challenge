@@ -9,7 +9,7 @@ const SearchResults = ({ searchString, closeSearchResults }) => {
       </header>
       <div className="card__body">
         <p>No results found.</p>
-        <Button className="btn" text="Dismiss" onClick={closeSearchResults} />
+        <Button text="Dismiss" onClick={closeSearchResults} />
       </div>
     </div>
   );

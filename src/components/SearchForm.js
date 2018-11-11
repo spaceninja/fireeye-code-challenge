@@ -34,7 +34,7 @@ class SearchForm extends React.Component {
           onChange={this.handleChange}
         />
         <Button
-          className="search__submit"
+          component="search__submit"
           text="Submit"
           icon="icon-search"
           iconOnly={true}

@@ -17,7 +17,7 @@ const Profile = ({ handleTweet }) => {
       </div>
       <div className="card__body--no-padding">
         <div className="profile__avatar">
-          <a href="#">
+          <a className="profile__avatar-link" href="#">
             <img
               alt="User Name"
               className="profile__avatar-media"

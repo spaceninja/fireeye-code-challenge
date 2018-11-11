@@ -32,7 +32,7 @@ class TweetComposer extends React.Component {
           value={this.state.tweet}
           onChange={this.handleChange}
         />
-        <Button className="new-tweet__submit" text="Submit" type="submit" />
+        <Button component="new-tweet__submit" text="Submit" type="submit" />
       </form>
     );
   }

@@ -23,7 +23,8 @@ $gray_900: #212121; // nearly black
 $color_primary_dark:  #4592c6;
 $color_primary:       #64b6ee;
 $color_primary_light: #cce6f9;
-$color_promoted_link: #fed264;
+$color_brand_yellow:  #ffc107;
+$color_brand_green:   #28a745;
 
 // background colors
 $color_bg_page: $gray_050;
@@ -38,6 +39,9 @@ $color_text_header:     $gray_600;
 $color_text_link:       $color_primary_dark;
 $color_text_link_hover: $color_primary;
 $color_text_muted:      $gray_400;
+$color_text_promoted:   $color_brand_yellow;
+$color_text_favorite:   $color_brand_yellow;
+$color_text_retweet:    $color_brand_green;
 
 //
 // Typography
@@ -75,6 +79,12 @@ $width_main:          590px;
 //
 $border_radius_default: 0.5rem;
 $border_width_avatar:   5px;
+
+//
+// Transitions
+//
+$duration_default:   0.2s;
+$transition_default: ease-in-out;
 
 //
 // Breakpoints

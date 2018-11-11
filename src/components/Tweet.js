@@ -28,34 +28,59 @@ class Tweet extends React.Component {
             />
           </a>
         </div>
-        <div>
-          <strong>{user.name}</strong> <span>@{user.screen_name}</span>{" "}
-          <time dateTime={tweet.created_at} title={date}>
+        <div className="tweet__header">
+          <span className="tweet__user">
+            <strong className="tweet__user-name">{user.name}</strong>{" "}
+            <span className="tweet__user-screen-name">@{user.screen_name}</span>{" "}
+          </span>
+          <time
+            className="tweet__timestamp"
+            dateTime={tweet.created_at}
+            title={date}
+          >
             {timeAgo}
           </time>
         </div>
-        <p dangerouslySetInnerHTML={{ __html: tweet.text }} />
-        {tweet.photo && (
-          <figure>
-            <img src={tweet.photo} alt="" />
-          </figure>
-        )}
-        <div>
-          <Button className="" text="Reply" icon="icon-reply" iconOnly={true} />
+        <div className="tweet__body">
+          <p
+            className="tweet__text"
+            dangerouslySetInnerHTML={{ __html: tweet.text }}
+          />
+          {tweet.photo && (
+            <figure className="tweet__photo">
+              <img className="tweet__photo-media" src={tweet.photo} alt="" />
+            </figure>
+          )}
+        </div>
+        <div className="tweet__actions">
           <Button
-            className=""
+            component="tweet__reply"
+            className="btn--muted"
+            text="Reply"
+            icon="icon-reply"
+            iconOnly={true}
+          />
+          <Button
+            component="tweet__retweet"
+            className="btn--retweet"
+            count={tweet.retweets}
             text="Retweet"
             icon="icon-retweet"
-            iconOnly={true}
+            showCount={true}
+            active={tweet.retweeted}
           />
           <Button
-            className=""
+            component="tweet__fave"
+            className="btn--fave"
+            count={tweet.favorites}
             text="Favorite"
             icon="icon-star"
-            iconOnly={true}
+            showCount={true}
+            active={tweet.favorited}
           />
           <Button
-            className=""
+            component="tweet__more"
+            className="btn--muted"
             text="More"
             icon="icon-ellipsis-h"
             iconOnly={true}
