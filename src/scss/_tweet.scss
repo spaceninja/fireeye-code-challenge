@@ -53,10 +53,53 @@
   }
 }
 
+.tweet__more {
+  position: relative;
+}
+
+.tweet__more-dropdown {
+  @include reset_list();
+  background: white;
+  border: 1px solid $color_border_default;
+  border-radius: $border_radius_default / 2;
+  box-shadow: 0 1px 4px rgba(black, 0.25);
+  display: none;
+  left: 0.25em;
+  line-height: 1;
+  min-width: 200px;
+  overflow: hidden;
+  position: absolute;
+  top: calc(100% - 0.25em);
+  z-index: 1;
+
+  :focus + & {
+    display: block;
+  }
+}
+
+.tweet__more-item a {
+  color: $color_text_default;
+  display: block;
+  padding: 0.5em 0.75em;
+
+  &:hover,
+  &:focus {
+    background: $color_primary;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+//
+// Retweeted Modifier
+//
 .tweet--retweet {
   background: #ffeeee;
 }
 
+//
+// Threaded Modifier
+//
 .tweet--thread {
   border-left: 4px solid pink;
 

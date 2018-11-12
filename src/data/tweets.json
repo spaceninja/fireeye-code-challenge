@@ -1,7 +1,7 @@
 [
   {
     "created_at": "2014-01-17T00:58:00.000Z",
-    "id": 123412341234,
+    "id": 423982655701385216,
     "text": "<a href=\"#\">@make_believing</a> <a href=\"#\">@Roach</a> Ollie *is* the twitterific bird. Remember twitteriffic? It was actually the first twitter client to use a bird logo",
     "user": {
       "name": "Patrick Ewing",
@@ -182,7 +182,7 @@
     },
     "retweeted_by": null,
     "retweets": 0,
-    "favorites": 1,
+    "favorites": 0,
     "favorited": false,
     "retweeted": false
   }

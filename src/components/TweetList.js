@@ -10,7 +10,14 @@ class TweetList extends React.Component {
         </header>
         <div className="card__body--no-padding">
           {this.props.tweets.map(tweet => (
-            <Tweet key={tweet.id} details={tweet} />
+            <Tweet
+              handleExpand={this.props.handleExpand}
+              handleFavorite={this.props.handleFavorite}
+              handleReply={this.props.handleReply}
+              handleRetweet={this.props.handleRetweet}
+              key={tweet.id}
+              details={tweet}
+            />
           ))}
         </div>
       </div>

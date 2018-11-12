@@ -17,7 +17,7 @@ class App extends React.Component {
   };
 
   handleTweet = tweetString => {
-    console.log(tweetString);
+    console.log("NEW TWEET", tweetString);
     this.setState({ tweetString });
   };
 
@@ -31,6 +31,51 @@ class App extends React.Component {
 
   openTweetModal = () => {
     console.log("OPEN NEW TWEET MODAL");
+  };
+
+  saveTweet = tweet => {
+    const tweets = [...this.state.tweets];
+    const index = tweets.findIndex(t => t.id === tweet.id);
+    if (index >= 0) {
+      tweets.splice(index, 1, tweet);
+    } else {
+      tweets.push(tweet);
+    }
+    this.setState({ tweets });
+  };
+
+  handleExpand = id => {
+    const tweet = this.state.tweets.find(t => t.id === id);
+    tweet.thread.collapsed = false;
+    this.saveTweet(tweet);
+  };
+
+  handleFavorite = id => {
+    const tweet = this.state.tweets.find(t => t.id === id);
+    if (tweet.favorited) {
+      tweet.favorited = false;
+      tweet.favorites -= 1;
+    } else {
+      tweet.favorited = true;
+      tweet.favorites += 1;
+    }
+    this.saveTweet(tweet);
+  };
+
+  handleRetweet = id => {
+    const tweet = this.state.tweets.find(t => t.id === id);
+    if (tweet.retweeted) {
+      tweet.retweeted = false;
+      tweet.retweets -= 1;
+    } else {
+      tweet.retweeted = true;
+      tweet.retweets += 1;
+    }
+    this.saveTweet(tweet);
+  };
+
+  handleReply = username => {
+    console.log("REPLY TO", username);
   };
 
   componentDidMount() {
@@ -60,7 +105,13 @@ class App extends React.Component {
               closeSearchResults={this.closeSearchResults}
             />
           ) : (
-            <TweetList tweets={this.state.tweets} />
+            <TweetList
+              handleExpand={this.handleExpand}
+              handleFavorite={this.handleFavorite}
+              handleReply={this.handleReply}
+              handleRetweet={this.handleRetweet}
+              tweets={this.state.tweets}
+            />
           )}
         </main>
       </div>

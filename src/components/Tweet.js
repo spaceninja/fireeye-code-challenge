@@ -4,6 +4,22 @@ import Icon from "./Icon";
 import moment from "moment-twitter";
 
 class Tweet extends React.Component {
+  handleExpand = () => {
+    this.props.handleExpand(this.props.details.id);
+  };
+
+  handleFavorite = () => {
+    this.props.handleFavorite(this.props.details.id);
+  };
+
+  handleReply = () => {
+    this.props.handleReply(this.props.details.user.screen_name);
+  };
+
+  handleRetweet = () => {
+    this.props.handleRetweet(this.props.details.id);
+  };
+
   render() {
     const { user, thread, ...tweet } = this.props.details;
     const avatarURL = "https://pbs.twimg.com/profile_images";
@@ -27,6 +43,7 @@ class Tweet extends React.Component {
             <Button
               component="tweet__show-more"
               className="btn--link"
+              onClick={this.handleExpand}
               text="1 more reply"
             />
           </div>
@@ -67,13 +84,15 @@ class Tweet extends React.Component {
               </span>
             </a>
           </span>
-          <time
-            className="tweet__timestamp"
-            dateTime={tweet.created_at}
-            title={date}
-          >
-            {timeAgo}
-          </time>
+          <a className="tweet__timestamp-link" href="#">
+            <time
+              className="tweet__timestamp"
+              dateTime={tweet.created_at}
+              title={date}
+            >
+              {timeAgo}
+            </time>
+          </a>
         </div>
         <div className="tweet__body">
           <p
@@ -88,37 +107,59 @@ class Tweet extends React.Component {
         </div>
         <div className="tweet__actions">
           <Button
-            component="tweet__reply"
             className="btn--muted"
-            text="Reply"
+            component="tweet__btn-reply"
             icon="icon-reply"
             iconOnly={true}
+            onClick={this.handleReply}
+            text="Reply"
           />
           <Button
-            component="tweet__retweet"
-            className="btn--retweet"
-            count={tweet.retweets}
-            text="Retweet"
-            icon="icon-retweet"
-            showCount={true}
             active={tweet.retweeted}
-          />
-          <Button
-            component="tweet__fave"
-            className="btn--fave"
-            count={tweet.favorites}
-            text="Favorite"
-            icon="icon-star"
+            className="btn--retweet"
+            component="tweet__btn-retweet"
+            count={tweet.retweets}
+            icon="icon-retweet"
+            onClick={this.handleRetweet}
             showCount={true}
-            active={tweet.favorited}
+            text="Retweet"
           />
           <Button
-            component="tweet__more"
-            className="btn--muted"
-            text="More"
-            icon="icon-ellipsis-h"
-            iconOnly={true}
+            active={tweet.favorited}
+            className="btn--fave"
+            component="tweet__btn-fave"
+            count={tweet.favorites}
+            icon="icon-star"
+            onClick={this.handleFavorite}
+            showCount={true}
+            text="Favorite"
           />
+          <div class="tweet__more">
+            <Button
+              className="btn--muted"
+              component="tweet__btn-more"
+              icon="icon-ellipsis-h"
+              iconOnly={true}
+              text="More"
+            />
+            <ul className="tweet__more-dropdown">
+              <li className="tweet__more-item">
+                <a href="#">Copy link to Tweet</a>
+              </li>
+              <li className="tweet__more-item">
+                <a href="#">Embed Tweet</a>
+              </li>
+              <li className="tweet__more-item">
+                <a href="#">Mute @{user.screen_name}</a>
+              </li>
+              <li className="tweet__more-item">
+                <a href="#">Block @{user.screen_name}</a>
+              </li>
+              <li className="tweet__more-item">
+                <a href="#">Report Tweet</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </article>
     );
