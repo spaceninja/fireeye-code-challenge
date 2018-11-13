@@ -9,10 +9,6 @@
   line-height: 1.2;
   padding: $spacing_default;
   resize: none;
-
-  .is-expanded & {
-    height: calc(3em + $spacing_default * 2);
-  }
 }
 
 .new-tweet__actions {
