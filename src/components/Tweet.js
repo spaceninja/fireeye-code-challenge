@@ -31,6 +31,7 @@ class Tweet extends React.Component {
       if (thread.end) classes += " tweet--thread-end";
       if (thread.collapsed) classes += " is-collapsed";
     }
+
     if (thread && thread.collapsed) {
       return (
         <article className={classes}>
@@ -45,9 +46,10 @@ class Tweet extends React.Component {
         </article>
       );
     }
+
+    /* eslint-disable jsx-a11y/anchor-is-valid */
     return (
       <article className={classes}>
-        {/* eslint-disable jsx-a11y/anchor-is-valid */}
         <Avatar user={user} />
         {tweet.retweeted_by && (
           <div className="tweet__retweet-info">

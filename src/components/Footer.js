@@ -1,9 +1,9 @@
 import React from "react";
 
 const Footer = props => {
+  /* eslint-disable jsx-a11y/anchor-is-valid */
   return (
     <footer className="app-footer card">
-      {/* eslint-disable jsx-a11y/anchor-is-valid */}
       <div className="card__body">
         <ul className="app-footer__list">
           <li className="app-footer__item">© 2014 Twitter</li>

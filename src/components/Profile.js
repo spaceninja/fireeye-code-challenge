@@ -2,9 +2,9 @@ import React from "react";
 import TweetComposer from "./TweetComposer";
 
 const Profile = ({ composerExpanded, handleNewTweet }) => {
+  /* eslint-disable jsx-a11y/anchor-is-valid */
   return (
     <div className="profile card">
-      {/* eslint-disable jsx-a11y/anchor-is-valid */}
       <div className="card__image">
         <img
           alt=""

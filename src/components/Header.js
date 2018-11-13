@@ -17,9 +17,9 @@ class Header extends React.Component {
   };
 
   render() {
+    /* eslint-disable jsx-a11y/anchor-is-valid */
     return (
       <div className="app-header">
-        {/* eslint-disable jsx-a11y/anchor-is-valid */}
         <h1 className="app-header__logo">
           <a href="#">
             <Icon type="icon-twitter" />

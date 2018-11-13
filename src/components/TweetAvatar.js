@@ -2,6 +2,7 @@ import React from "react";
 
 const Avatar = ({ user }) => {
   const avatarURL = "https://pbs.twimg.com/profile_images";
+
   /* eslint-disable jsx-a11y/anchor-is-valid */
   return (
     <div className="tweet__avatar">

@@ -7,6 +7,7 @@ const Timestamp = props => {
   const diff = now.diff(timestamp);
   const timeAgo = moment(moment() - diff).twitterShort();
   const date = timestamp.format("h:mm A - D MMM YYYY");
+
   /* eslint-disable jsx-a11y/anchor-is-valid */
   return (
     <a className="tweet__timestamp-link" href="#">

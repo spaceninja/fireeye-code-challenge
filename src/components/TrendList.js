@@ -2,9 +2,9 @@ import React from "react";
 import Icon from "./Icon";
 
 const TrendList = ({ trends }) => {
+  /* eslint-disable jsx-a11y/anchor-is-valid */
   return (
     <div className="trend-list card">
-      {/* eslint-disable jsx-a11y/anchor-is-valid */}
       <div className="card__body">
         <h3 className="trend-list__title">
           Trends{" "}
