@@ -2,6 +2,8 @@
 
 > Recreating Twitter circa 2014 using React
 
+You can browse the source code here, or view the [live demo site](https://spaceninja.github.io/fireeye-code-challenge/).
+
 ## Code Challenge Notes
 
 * Build a small JS app using the attached mockup (see mock.png)
