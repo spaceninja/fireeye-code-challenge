@@ -28,7 +28,7 @@ class App extends React.Component {
     } else {
       tweets.unshift(tweet);
     }
-    this.setState({ tweets });
+    this.setState({ tweets, showModal: false });
   };
 
   closeSearchResults = () => {
@@ -45,16 +45,16 @@ class App extends React.Component {
 
   handleNewTweet = tweetString => {
     const then = new Date("2014-01-17T03:21:00.000Z");
-    const now = new Date(Date.now);
+    const now = new Date(Date.now());
     const newTweet = {
       created_at: then.toISOString(),
       id: now.valueOf(),
       text: tweetString,
       user: {
-        name: "Patrick Ewing",
-        screen_name: "hoverbird",
-        avatar: "453590893774118912/E00Ns3Dq",
-        avatar_format: "png"
+        name: "Example User",
+        screen_name: "exampleuser",
+        avatar: "rDEOVtE7vOs",
+        avatar_format: "unsplash"
       },
       thread: null,
       retweeted_by: null,
@@ -86,6 +86,7 @@ class App extends React.Component {
 
   handleRetweet = id => {
     const tweet = this.state.tweets.find(t => t.id === id);
+    console.log(tweet);
     if (tweet.retweeted) {
       tweet.retweeted = false;
       tweet.retweets -= 1;

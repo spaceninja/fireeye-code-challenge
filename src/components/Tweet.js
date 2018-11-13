@@ -2,7 +2,7 @@ import React from "react";
 import Button from "./Button";
 import Icon from "./Icon";
 import Timestamp from "./TweetTimestamp";
-import Avatar from "./TweetAvatar";
+import Avatar from "./Avatar";
 
 class Tweet extends React.Component {
   handleExpand = () => {
@@ -50,7 +50,7 @@ class Tweet extends React.Component {
     /* eslint-disable jsx-a11y/anchor-is-valid */
     return (
       <article className={classes}>
-        <Avatar user={user} />
+        <Avatar component="tweet" user={user} />
         {tweet.retweeted_by && (
           <div className="tweet__retweet-info">
             <Icon className="tweet__retweet-icon" type="icon-retweet" />

@@ -1,7 +1,15 @@
 import React from "react";
+import Avatar from "./Avatar";
 import TweetComposer from "./TweetComposer";
 
 const Profile = ({ composerExpanded, handleNewTweet }) => {
+  const user = {
+    name: "Example User",
+    screen_name: "exampleuser",
+    avatar: "rDEOVtE7vOs",
+    avatar_format: "unsplash"
+  };
+
   /* eslint-disable jsx-a11y/anchor-is-valid */
   return (
     <div className="profile card">
@@ -16,18 +24,7 @@ const Profile = ({ composerExpanded, handleNewTweet }) => {
         />
       </div>
       <div className="card__body--no-padding">
-        <div className="profile__avatar">
-          <a className="profile__avatar-link" href="#">
-            <img
-              alt="User Name"
-              className="profile__avatar-media"
-              sizes="100px"
-              src="https://source.unsplash.com/rDEOVtE7vOs/100x100"
-              srcSet="https://source.unsplash.com/rDEOVtE7vOs/100x100 100w,
-                  https://source.unsplash.com/rDEOVtE7vOs/200x200 200w"
-            />
-          </a>
-        </div>
+        <Avatar size="large" component="profile" user={user} />
         <ul className="profile__stat-list">
           <li className="profile__stat">
             <a href="#">
