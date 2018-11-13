@@ -1,13 +1,21 @@
 import React from "react";
 import Button from "./Button";
 
+const maxLength = 140;
+
 class Composer extends React.Component {
   state = {
-    tweet: this.props.tweetString
+    tweet: this.props.tweetString,
+    remaining: this.props.tweetString
+      ? maxLength - this.props.tweetString.length
+      : maxLength
   };
 
   handleChange = e => {
-    this.setState({ tweet: e.target.value });
+    this.setState({
+      tweet: e.target.value,
+      remaining: maxLength - e.target.value.length
+    });
   };
 
   handleSubmit = e => {
@@ -29,10 +37,12 @@ class Composer extends React.Component {
         <textarea
           className="new-tweet__input"
           id="new-tweet"
+          maxLength={maxLength}
+          onChange={this.handleChange}
           placeholder="Compose new Tweet"
           value={this.state.tweet}
-          onChange={this.handleChange}
         />
+        <p>{this.state.remaining} characters remaining</p>
         <Button component="new-tweet__submit" text="Submit" type="submit" />
       </form>
     );
