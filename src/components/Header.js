@@ -8,6 +8,10 @@ class Header extends React.Component {
     searchActive: false
   };
 
+  startNewTweet = () => {
+    this.props.startNewTweet();
+  };
+
   toggleSearch = () => {
     this.setState({ searchActive: !this.state.searchActive });
   };
@@ -52,7 +56,7 @@ class Header extends React.Component {
               icon="icon-quill"
               text="New Tweet"
               iconOnly={true}
-              onClick={this.props.openTweetModal}
+              onClick={this.startNewTweet}
             />
           </ul>
         </div>

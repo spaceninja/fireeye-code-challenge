@@ -13,7 +13,7 @@ class TweetList extends React.Component {
             <Tweet
               handleExpand={this.props.handleExpand}
               handleFavorite={this.props.handleFavorite}
-              handleReply={this.props.handleReply}
+              startNewTweet={this.props.startNewTweet}
               handleRetweet={this.props.handleRetweet}
               key={tweet.id}
               details={tweet}

@@ -13,8 +13,8 @@ class Tweet extends React.Component {
     this.props.handleFavorite(this.props.details.id);
   };
 
-  handleReply = () => {
-    this.props.handleReply(this.props.details.user.screen_name);
+  startNewTweet = () => {
+    this.props.startNewTweet(this.props.details.user.screen_name);
   };
 
   handleRetweet = () => {
@@ -85,7 +85,7 @@ class Tweet extends React.Component {
             component="tweet__btn-reply"
             icon="icon-reply"
             iconOnly={true}
-            onClick={this.handleReply}
+            onClick={this.startNewTweet}
             text="Reply"
           />
           <Button

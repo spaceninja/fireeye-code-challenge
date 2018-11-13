@@ -1,9 +1,9 @@
 import React from "react";
 import Button from "./Button";
 
-class TweetComposer extends React.Component {
+class Composer extends React.Component {
   state = {
-    tweet: ""
+    tweet: this.props.tweetString
   };
 
   handleChange = e => {
@@ -25,6 +25,7 @@ class TweetComposer extends React.Component {
         <label htmlFor="new-tweet" className="new-tweet__label sr-only">
           Compose new Tweet
         </label>
+        <p>{this.props.expanded ? "EXPANDED" : "COLLAPSED"}</p>
         <textarea
           className="new-tweet__input"
           id="new-tweet"
@@ -38,4 +39,4 @@ class TweetComposer extends React.Component {
   }
 }
 
-export default TweetComposer;
+export default Composer;

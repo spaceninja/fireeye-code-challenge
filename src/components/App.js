@@ -5,32 +5,19 @@ import SearchResults from "./SearchResults";
 import Profile from "./Profile";
 import TrendList from "./TrendList";
 import Footer from "./Footer";
+import Modal from "./Modal";
 import trends from "../data/trends";
 import jsonTweets from "../data/tweets.json";
 
 class App extends React.Component {
   state = {
+    profileComposerExpanded: false,
     searchString: "",
+    showModal: false,
     showSearchResults: false,
     trends: trends,
-    tweets: []
-  };
-
-  handleTweet = tweetString => {
-    console.log("NEW TWEET", tweetString);
-    this.setState({ tweetString });
-  };
-
-  handleSearch = searchString => {
-    this.setState({ searchString, showSearchResults: true });
-  };
-
-  closeSearchResults = () => {
-    this.setState({ showSearchResults: false });
-  };
-
-  openTweetModal = () => {
-    console.log("OPEN NEW TWEET MODAL");
+    tweets: [],
+    tweetString: ""
   };
 
   saveTweet = tweet => {
@@ -39,9 +26,44 @@ class App extends React.Component {
     if (index >= 0) {
       tweets.splice(index, 1, tweet);
     } else {
-      tweets.push(tweet);
+      tweets.unshift(tweet);
     }
     this.setState({ tweets });
+  };
+
+  closeSearchResults = () => {
+    this.setState({ showSearchResults: false });
+  };
+
+  toggleModal = () => {
+    this.setState({ showModal: !this.state.showModal });
+  };
+
+  handleSearch = searchString => {
+    this.setState({ searchString, showSearchResults: true });
+  };
+
+  handleNewTweet = tweetString => {
+    const then = new Date("2014-01-17T03:21:00.000Z");
+    const now = new Date(Date.now);
+    const newTweet = {
+      created_at: then.toISOString(),
+      id: now.valueOf(),
+      text: tweetString,
+      user: {
+        name: "Patrick Ewing",
+        screen_name: "hoverbird",
+        avatar: "453590893774118912/E00Ns3Dq",
+        avatar_format: "png"
+      },
+      thread: null,
+      retweeted_by: null,
+      retweets: 0,
+      favorites: 0,
+      favorited: false,
+      retweeted: false
+    };
+    this.saveTweet(newTweet);
   };
 
   handleExpand = id => {
@@ -74,8 +96,10 @@ class App extends React.Component {
     this.saveTweet(tweet);
   };
 
-  handleReply = username => {
-    console.log("REPLY TO", username);
+  startNewTweet = username => {
+    const seed = username ? `@${username}: ` : "";
+    this.setState({ tweetString: seed });
+    this.toggleModal();
   };
 
   componentDidMount() {
@@ -89,12 +113,15 @@ class App extends React.Component {
       <div className="app">
         <header className="app__header">
           <Header
-            openTweetModal={this.openTweetModal}
+            startNewTweet={this.startNewTweet}
             handleSearch={this.handleSearch}
           />
         </header>
         <aside className="app__sidebar">
-          <Profile handleTweet={this.handleTweet} />
+          <Profile
+            handleNewTweet={this.handleNewTweet}
+            composerExpanded={this.state.profileComposerExpanded}
+          />
           <TrendList trends={this.state.trends} />
           <Footer />
         </aside>
@@ -108,12 +135,19 @@ class App extends React.Component {
             <TweetList
               handleExpand={this.handleExpand}
               handleFavorite={this.handleFavorite}
-              handleReply={this.handleReply}
+              startNewTweet={this.startNewTweet}
               handleRetweet={this.handleRetweet}
               tweets={this.state.tweets}
             />
           )}
         </main>
+        {this.state.showModal && (
+          <Modal
+            handleNewTweet={this.handleNewTweet}
+            toggleModal={this.toggleModal}
+            tweetString={this.state.tweetString}
+          />
+        )}
       </div>
     );
   }
