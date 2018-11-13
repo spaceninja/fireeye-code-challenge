@@ -10,8 +10,10 @@
 ## Scott's Notes
 
 * The mockup provided was a low-resolution screenshot, so I replaced the icons in the header bar with open-source SVG icons from FontAwesome. For a real client project, I'd work with the designer to get the proper SVG assets.
-* Again, because the mock was low-resolution, I've replaced the photos (the black and white photo of Arnold and the photo of the Twitter design team) with some stock assets.
-* The twitter user avatars may not match because I'm pulling the live avatars from the site.
+* Because the mock was low-resolution, I've replaced the photos (the black and white photo of Arnold and the photo user avatar) with some stock assets.
+* The twitter user avatars don't match the comp because I grabbed the live avatars from Twitter.
+* Some twitter functionality has been emulated — faving, retweeting, replying, and search, as well as composing a tweet.
+* Mobile-friendly
 
 ---
 
