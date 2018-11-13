@@ -166,17 +166,81 @@
 // Threaded Modifier
 //
 .tweet--thread {
-  border-left: 4px solid pink;
 
-  &.is-collapsed {
-    background: pink;
+  + .tweet--thread {
+    border-top: 0;
+    padding-top: $spacing_default;
+  }
+
+  .tweet__avatar {
+    top: $spacing_default;
+  }
+
+  &::before,
+  &::after {
+    border: 2px solid $color_border_thread;
+    border-radius: 2px;
+    content: "";
+    display: block;
+    left: $size_tweet_avatar / 2 + $spacing_default * 2 - 2px;
+    position: absolute;
+    width: 0;
+    z-index: 1;
+  }
+
+  &::before {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    height: $spacing_default - 2px;
+    top: 0;
+  }
+
+  &::after {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    bottom: 0;
+    top: $size_tweet_avatar + $spacing_default + 2px;
   }
 }
 
+.tweet--thread-collapsed {
+  padding-bottom: $spacing_default;
+
+  &::before {
+    height: 5px;
+  }
+
+  &::after {
+    top: 27px;
+  }
+}
+
+.tweet__collapsed-icon {
+  color: $color_border_thread;
+  font-size: 20px;
+  left: $size_tweet_avatar / 2 + $spacing_default * 2 - 10px;
+  position: absolute;
+  top: 7px;
+}
+
 .tweet--thread-start {
-  border-top: 4px solid pink;
+
+  .tweet__avatar {
+    top: $spacing_default * 2; // restore default avatar position
+  }
+
+  &::after {
+    top: $size_tweet_avatar + $spacing_default * 2 + 2px;
+  }
+
+  &::before {
+    display: none;
+  }
 }
 
 .tweet--thread-end {
-  border-bottom: 4px solid pink;
+
+  &::after {
+    display: none;
+  }
 }

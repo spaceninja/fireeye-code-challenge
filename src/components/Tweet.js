@@ -30,12 +30,13 @@ class Tweet extends React.Component {
       classes += " tweet--thread";
       if (thread.start) classes += " tweet--thread-start";
       if (thread.end) classes += " tweet--thread-end";
-      if (thread.collapsed) classes += " is-collapsed";
+      if (thread.collapsed) classes += " tweet--thread-collapsed";
     }
 
     if (thread && thread.collapsed) {
       return (
         <article className={classes}>
+          <Icon className="tweet__collapsed-icon" type="icon-ellipsis-v" />
           <div className="tweet__collapsed-text">
             <Button
               component="tweet__show-more"

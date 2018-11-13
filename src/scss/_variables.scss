@@ -25,13 +25,15 @@ $color_primary:       #64b6ee;
 $color_primary_light: #cce6f9;
 $color_brand_yellow:  #ffc107;
 $color_brand_green:   #28a745;
+$color_brand_thread:  #9aaab5;
 
 // background colors
 $color_bg_page: $gray_050;
 
 // border colors
 $color_border_default: $gray_300;
-$color_border_light: $gray_200;
+$color_border_light:   $gray_200;
+$color_border_thread:  $color_brand_thread;
 
 // text colors
 $color_text_default:    $gray_800;
