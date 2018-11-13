@@ -1,7 +1,8 @@
 import React from "react";
 import Button from "./Button";
 import Icon from "./Icon";
-import moment from "moment-twitter";
+import Timestamp from "./TweetTimestamp";
+import Avatar from "./TweetAvatar";
 
 class Tweet extends React.Component {
   handleExpand = () => {
@@ -22,12 +23,6 @@ class Tweet extends React.Component {
 
   render() {
     const { user, thread, ...tweet } = this.props.details;
-    const avatarURL = "https://pbs.twimg.com/profile_images";
-    const timestamp = moment(tweet.created_at);
-    const now = moment("2014-01-17T03:21:00.000Z"); // hack to make old tweets seem current
-    const diff = now.diff(timestamp);
-    const timeAgo = moment(moment() - diff).twitterShort();
-    const date = timestamp.format("h:mm A - D MMM YYYY");
     let classes = "tweet";
     if (tweet.retweeted_by) classes += " tweet--retweet";
     if (thread) {
@@ -53,20 +48,7 @@ class Tweet extends React.Component {
     return (
       <article className={classes}>
         {/* eslint-disable jsx-a11y/anchor-is-valid */}
-        <div className="tweet__avatar">
-          <a href="#">
-            <img
-              alt={user.name}
-              className="tweet__avatar-media"
-              sizes="48px"
-              src={`${avatarURL}/${user.avatar}_normal.${user.avatar_format}`}
-              srcSet={`
-                ${avatarURL}/${user.avatar}_normal.${user.avatar_format} 48w,
-                ${avatarURL}/${user.avatar}_x96.${user.avatar_format} 96w
-              `}
-            />
-          </a>
-        </div>
+        <Avatar user={user} />
         {tweet.retweeted_by && (
           <div className="tweet__retweet-info">
             <Icon className="tweet__retweet-icon" type="icon-retweet" />
@@ -84,15 +66,7 @@ class Tweet extends React.Component {
               </span>
             </a>
           </span>
-          <a className="tweet__timestamp-link" href="#">
-            <time
-              className="tweet__timestamp"
-              dateTime={tweet.created_at}
-              title={date}
-            >
-              {timeAgo}
-            </time>
-          </a>
+          <Timestamp created_at={tweet.created_at} />
         </div>
         <div className="tweet__body">
           <p
@@ -134,7 +108,7 @@ class Tweet extends React.Component {
             showCount={true}
             text="Favorite"
           />
-          <div class="tweet__more">
+          <div className="tweet__more">
             <Button
               className="btn--muted"
               component="tweet__btn-more"
