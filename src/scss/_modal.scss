@@ -14,9 +14,12 @@
 .modal_contents {
   background: white;
   margin: auto;
-  max-width: 90vw;
-  min-width: 50vw;
   position: relative;
+  width: 95vw;
+
+  @media only screen and (min-width: $screen_large) {
+    width: 50vw;
+  }
 }
 
 .modal__close {

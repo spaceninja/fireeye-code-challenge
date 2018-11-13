@@ -4,11 +4,30 @@
 input,
 textarea,
 select {
+  border: 1px solid $color_border_default;
+  border-radius: $border_radius_default / 2;
   font-size: 16px; // prevent iOS from zooming form controls
+  width: 100%;
+
+  &::placeholder {
+    color: $color_text_muted;
+  }
+
+  &:focus {
+    border-color: $color_primary;
+    outline: 0;
+  }
 }
 
 button {
   cursor: pointer;
+}
+
+label {
+  color: $color_text_header;
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5em;
 }
 
 //
@@ -21,7 +40,9 @@ button {
   border-radius: 1.125em;
   color: white;
   display: flex;
+  font-weight: 600;
   height: 2.25em;
+  line-height: 1;
   padding: 0 1em;
   transition: background $duration_default $transition_default;
 
