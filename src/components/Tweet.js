@@ -3,6 +3,7 @@ import Button from "./Button";
 import Icon from "./Icon";
 import Timestamp from "./TweetTimestamp";
 import Avatar from "./Avatar";
+import DOMPurify from "dompurify";
 
 class Tweet extends React.Component {
   handleExpand = () => {
@@ -73,7 +74,7 @@ class Tweet extends React.Component {
         <div className="tweet__body">
           <p
             className="tweet__text"
-            dangerouslySetInnerHTML={{ __html: tweet.text }}
+            dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(tweet.text) }}
           />
           {tweet.photo && (
             <figure className="tweet__photo">
