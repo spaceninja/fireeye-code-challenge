@@ -1,6 +1,10 @@
 # FireEye Front-End Code Challenge
 
-* Build a small JS app using the attached mockup
+> Recreating Twitter circa 2014 using React
+
+## Code Challenge Notes
+
+* Build a small JS app using the attached mockup (see mock.png)
 * Tweet data should be loaded dynamically from a json file
 * You _can_ use _any_ JS framework of your choice or no framework at all
 * You should _NOT_ use any CSS frameworks or any existing CSS code
