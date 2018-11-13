@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/fireeye-code-challenge/precache-manifest.5eecf34de2b047156dbf72e55fa61b77.js"
+  "/fireeye-code-challenge/precache-manifest.0f34a29345c40cfc483d876882a20a28.js"
 );
 
 workbox.clientsClaim();
