@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Icon from "./Icon";
 
 const TrendList = ({ trends }) => {
@@ -33,6 +34,16 @@ const TrendList = ({ trends }) => {
       </div>
     </div>
   );
+};
+
+TrendList.propTypes = {
+  trends: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired,
+      promoted: PropTypes.bool
+    })
+  ).isRequired
 };
 
 export default TrendList;

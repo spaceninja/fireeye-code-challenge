@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import sprite from "../assets/sprite.svg";
 
 const Icon = ({ type, className, title }) => (
@@ -12,5 +13,11 @@ const Icon = ({ type, className, title }) => (
     <use xlinkHref={`${sprite}#${type}`} />
   </svg>
 );
+
+Icon.propTypes = {
+  className: PropTypes.string,
+  title: PropTypes.string,
+  type: PropTypes.string.isRequired
+};
 
 export default Icon;

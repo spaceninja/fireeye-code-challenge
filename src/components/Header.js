@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Icon from "./Icon";
 import NavItem from "./NavItem";
 import SearchForm from "./SearchForm";
@@ -63,6 +64,11 @@ class Header extends React.Component {
       </div>
     );
   }
+
+  static propTypes = {
+    startNewTweet: PropTypes.func.isRequired,
+    handleSearch: PropTypes.func.isRequired
+  };
 }
 
 export default Header;

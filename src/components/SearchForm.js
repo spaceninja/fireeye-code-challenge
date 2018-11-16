@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Button from "./Button";
 
 class SearchForm extends React.Component {
@@ -43,6 +44,10 @@ class SearchForm extends React.Component {
       </form>
     );
   }
+
+  static propTypes = {
+    onSubmit: PropTypes.func.isRequired
+  };
 }
 
 export default SearchForm;

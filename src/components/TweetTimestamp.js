@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import moment from "moment-twitter";
 
 const Timestamp = props => {
@@ -20,6 +21,10 @@ const Timestamp = props => {
       </time>
     </a>
   );
+};
+
+Timestamp.propTypes = {
+  created_at: PropTypes.string.isRequired
 };
 
 export default Timestamp;

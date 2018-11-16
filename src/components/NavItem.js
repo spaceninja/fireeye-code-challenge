@@ -1,7 +1,8 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Button from "./Button";
 
-const NavItem = ({ active, icon, iconOnly, onClick, text, className }) => {
+const NavItem = ({ active, className, icon, iconOnly, onClick, text }) => {
   return (
     <li
       className={`app-header__nav-list-item ${className} ${
@@ -17,6 +18,15 @@ const NavItem = ({ active, icon, iconOnly, onClick, text, className }) => {
       />
     </li>
   );
+};
+
+NavItem.propTypes = {
+  active: PropTypes.bool,
+  className: PropTypes.string,
+  icon: PropTypes.string.isRequired,
+  iconOnly: PropTypes.bool,
+  onClick: PropTypes.func,
+  text: PropTypes.string.isRequired
 };
 
 export default NavItem;

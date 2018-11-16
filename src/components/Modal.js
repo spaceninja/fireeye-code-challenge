@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Button from "./Button";
 import TweetComposer from "./TweetComposer";
 
@@ -24,6 +25,12 @@ const Modal = props => {
       </div>
     </div>
   );
+};
+
+Modal.propTypes = {
+  toggleModal: PropTypes.func.isRequired,
+  handleNewTweet: PropTypes.func.isRequired,
+  tweetString: PropTypes.string.isRequired
 };
 
 export default Modal;

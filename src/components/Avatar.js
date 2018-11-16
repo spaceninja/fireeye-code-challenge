@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Avatar = ({ size = "small", component, user }) => {
   let avatarURLx48 = "";
@@ -49,6 +50,17 @@ const Avatar = ({ size = "small", component, user }) => {
       </a>
     </div>
   );
+};
+
+Avatar.propTypes = {
+  size: PropTypes.string,
+  component: PropTypes.string.isRequired,
+  user: PropTypes.shape({
+    avatar: PropTypes.string.isRequired,
+    avatar_format: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    screen_name: PropTypes.string.isRequired
+  }).isRequired
 };
 
 export default Avatar;

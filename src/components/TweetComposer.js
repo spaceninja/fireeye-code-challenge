@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Button from "./Button";
 
 const maxLength = 140;
@@ -32,9 +33,7 @@ class Composer extends React.Component {
   render() {
     return (
       <form
-        className={`new-tweet ${this.props.className} ${
-          this.state.expanded ? "is-expanded" : ""
-        }`}
+        className={`new-tweet ${this.state.expanded ? "is-expanded" : ""}`}
         onSubmit={this.handleSubmit}
         onFocus={this.handleFocus}
       >
@@ -63,6 +62,12 @@ class Composer extends React.Component {
       </form>
     );
   }
+
+  static propTypes = {
+    expanded: PropTypes.bool.isRequired,
+    onSubmit: PropTypes.func.isRequired,
+    tweetString: PropTypes.string
+  };
 }
 
 export default Composer;

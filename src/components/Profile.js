@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Avatar from "./Avatar";
 import TweetComposer from "./TweetComposer";
 
@@ -51,6 +52,11 @@ const Profile = ({ composerExpanded, handleNewTweet }) => {
       </footer>
     </div>
   );
+};
+
+Profile.propTypes = {
+  composerExpanded: PropTypes.bool.isRequired,
+  handleNewTweet: PropTypes.func.isRequired
 };
 
 export default Profile;

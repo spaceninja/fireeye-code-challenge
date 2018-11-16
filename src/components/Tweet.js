@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Button from "./Button";
 import Icon from "./Icon";
 import Timestamp from "./TweetTimestamp";
@@ -142,6 +143,38 @@ class Tweet extends React.Component {
       </article>
     );
   }
+
+  static propTypes = {
+    handleExpand: PropTypes.func.isRequired,
+    handleFavorite: PropTypes.func.isRequired,
+    startNewTweet: PropTypes.func.isRequired,
+    handleRetweet: PropTypes.func.isRequired,
+    details: PropTypes.shape({
+      created_at: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
+      text: PropTypes.string.isRequired,
+      user: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        screen_name: PropTypes.string.isRequired,
+        avatar: PropTypes.string.isRequired,
+        avatar_format: PropTypes.string.isRequired
+      }).isRequired,
+      thread: PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        collapsed: PropTypes.bool.isRequired,
+        start: PropTypes.bool.isRequired,
+        end: PropTypes.bool.isRequired
+      }),
+      retweeted_by: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        screen_name: PropTypes.string.isRequired
+      }),
+      retweets: PropTypes.number.isRequired,
+      favorites: PropTypes.number.isRequired,
+      favorited: PropTypes.bool.isRequired,
+      retweeted: PropTypes.bool.isRequired
+    }).isRequired
+  };
 }
 
 export default Tweet;

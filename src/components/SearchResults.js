@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Button from "./Button";
 
 const SearchResults = ({ searchString, closeSearchResults }) => {
@@ -13,6 +14,11 @@ const SearchResults = ({ searchString, closeSearchResults }) => {
       </div>
     </div>
   );
+};
+
+SearchResults.propTypes = {
+  searchString: PropTypes.string.isRequired,
+  closeSearchResults: PropTypes.func.isRequired
 };
 
 export default SearchResults;
